@@ -1,0 +1,10 @@
+;;; package --- Specific setup for python development
+;;; Commentary:
+
+;;; Code:
+;; Auto Complete
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:setup-keys t)
+(setq jedi:complete-on-dot t)
+
+;;; py.el ends here
