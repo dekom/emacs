@@ -10,7 +10,6 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 
-(setq exec-path (cons "/usr/local/git/bin" exec-path)) ;; for el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 ;; Package Management
@@ -29,6 +28,8 @@
 			 ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
+(exec-path-from-shell-initialize)
+
 ;; Better Navigation with IDO
 (require 'ido)
 (ido-mode t)
@@ -40,7 +41,20 @@
 (load "~/.emacs.d/programming.el")
 (load "~/.emacs.d/py.el")
 (load "~/.emacs.d/modes.el")
+(load "~/.eamcs.d/schm.el")
 ;;; init.el ends here
 
 ;;; Usual disabled commands enabled
 (put 'narrow-to-region 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(quack-programs (quote ("mzscheme" "bigloo" "csi" "csi -hygienic" "gosh" "gracket" "gsi" "gsi ~~/syntax-case.scm -" "guile" "kawa" "mit-scheme" "racket" "racket -il typed/racket" "rs" "scheme" "scheme48" "scsh" "sisc" "stklos" "sxi"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
