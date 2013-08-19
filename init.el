@@ -6,6 +6,10 @@
 ;;; Code:
 
 ;; System Setup
+(setenv "SHELL" "/bin/bash")
+
+(setq debug-on-error t)
+
 (setq x-select-enable-clipboard t)
 
 (add-to-list 'load-path "~/.emacs.d")
@@ -33,15 +37,18 @@
 ;; Better Navigation with IDO
 (require 'ido)
 (ido-mode t)
-(setq ido-enable-flex-matching t)
-(setq ido-show-dot-for-dired t)
+(setq-default ido-enable-flex-matching t)
+(setq-default ido-show-dot-for-dired t)
+
+;; auto update buffer if file is changed on disk (and buffer not dirty)
+(global-auto-revert-mode 1)
 
 ;; Load other files
 (load "~/.emacs.d/theme.el")
 (load "~/.emacs.d/programming.el")
 (load "~/.emacs.d/py.el")
 (load "~/.emacs.d/modes.el")
-(load "~/.eamcs.d/schm.el")
+(load "~/.emacs.d/schm.el")
 ;;; init.el ends here
 
 ;;; Usual disabled commands enabled
