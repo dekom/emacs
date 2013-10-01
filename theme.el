@@ -33,6 +33,9 @@
 
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
+;; Visually wrap to 80 characters
+(add-hook 'text-mode-hook 'longlines-mode)
+
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
 
 ;; Set tab width to 4 and replace tabs with spaces

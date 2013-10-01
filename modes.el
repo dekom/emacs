@@ -6,4 +6,8 @@
 (require 'doc-mode)
 (add-to-list 'auto-mode-alist (cons "\\.asciidoc\\'" 'doc-mode))
 
+;; TeX
+(setq-default TeX-auto-save t)
+(setq-default TeX-parse-self t)
+
 ;;; modes.el ends here
