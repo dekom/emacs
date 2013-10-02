@@ -9,18 +9,22 @@
 (show-paren-mode 1) ;; highlight parentheses pairs
 
 (require 'linum)
-(global-linum-mode 1) ;; Display line numbers
+;;(global-linum-mode 1) ;; Display line numbers
 
 ;; GUI
 ;; - remove tool bar and scroll bar
 (tool-bar-mode 0)
+(menu-bar-mode 0)
 (scroll-bar-mode 0)
 
 ;; Prevent splash screen
 (setq-default inhibit-splash-screen t)
 
 ;; Theme
-(load-theme 'solarized-light t)
+;;(load-theme 'zenburn t)
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-greiner)
 
 ;;; White Spacing ;;;
 ;; Set columns to be 80 width and highlight characters past that width
@@ -46,5 +50,12 @@
 
 ;; Remove trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Font size
+(set-face-attribute 'default nil :height 100)
+
+;; Powerline
+(require 'powerline)
+(powerline-center-theme)
 
 ;;; theme.el ends here

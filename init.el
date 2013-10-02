@@ -32,7 +32,7 @@
 			 ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
-(exec-path-from-shell-initialize)
+;; (exec-path-from-shell-initialize)
 
 ;; Better Navigation with IDO
 (require 'ido)
