@@ -13,7 +13,6 @@
 (setq x-select-enable-clipboard t)
 
 (add-to-list 'load-path "~/.emacs.d")
-
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 ;; Package Management
@@ -43,7 +42,14 @@
 ;; auto update buffer if file is changed on disk (and buffer not dirty)
 (global-auto-revert-mode 1)
 
+;; have outlining everywhere
+(allout-mode)
+
+;; Syntax highlighting
+(global-font-lock-mode 1)
+
 ;; Load other files
+(load "~/.emacs.d/mykeys.el")
 (load "~/.emacs.d/theme.el")
 (load "~/.emacs.d/programming.el")
 (load "~/.emacs.d/py.el")
@@ -66,5 +72,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(put 'downcase-region 'disabled nil)
 (put 'erase-buffer 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
