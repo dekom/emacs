@@ -12,5 +12,4 @@
 ;; Setup the correct python interpreter
 (setq-default python-shell-interpreter "python3")
 
-
 ;;; py.el ends here

@@ -43,9 +43,9 @@
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
 
 ;; Set tab width to 8 and replace tabs with spaces
-(setq-default tab-width 8)
-(setq-default indent-tabs-mode nil)
-(setq-default c-basic-offset 8)
+;; (setq-default tab-width 8)
+;; (setq-default indent-tabs-mode nil)
+;; (setq-default c-basic-offset 8)
 (setq-default c-default-style "linux")
 
 ;; Remove trailing whitespace
