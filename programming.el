@@ -39,10 +39,11 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
-(require 'helm)
-(helm-mode 1)
+;; (require 'helm)
+;; (helm-mode 1)
 
-;; evil
-;;(require 'evil)
-;;(evil-mode 1)
+;; ;; evil
+;; (setq-default evil-replace-state-cursor '("red" box))
+;; (require 'evil)
+;; (evil-mode 1)
 ;;; programming.el ends here

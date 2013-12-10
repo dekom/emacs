@@ -21,7 +21,8 @@
 (setq-default inhibit-splash-screen t)
 
 ;; Theme
-(load-theme 'solarized-dark t)
+(load-theme 'zenburn t)
+;;(load-theme 'solarized-dark t)
 ;;(require 'color-theme)
 ;;(color-theme-initialize)
 ;;(color-theme-aalto-light)

@@ -15,4 +15,9 @@
 
 ;; Golang
 (add-hook 'before-save-hook 'gofmt-before-save)
+
+;; Clisp setup
+(setq-default inferior-lisp-program "/usr/bin/clisp")
+(require 'slime)
+(slime-setup)
 ;;; modes.el ends here
